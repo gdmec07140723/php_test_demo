@@ -1,0 +1,62 @@
+/*公共全局样式*/
+html,body,ul,li,img{margin:0px;padding:0px;}
+ul,ol,li{list-style:none;}
+a:link,a:visited{color:#006600;text-decoration:none;}
+a:hover{color:#cc0000;text-decoration:underline;}
+img{border:none;display:block;}
+body{font-size:12px;line-height:20px;font-family:"微软雅黑";background-color:#eee;}
+td{font-size: 12px;line-height:150%;}
+
+/*公共的类样式*/
+.clear{clear:both;}
+.topbg{
+	background:url(../Images/ad_topbg.gif);
+	color: #000000;
+	font-weight:bold;
+	text-align:center;
+}
+.border{background:#99aabb;}
+.tdbg{background:#fafafa;}
+.t4{color:#0000FF;}
+tr.title{background:url(../Images/ad_topbg.gif);color:#9F2911;font-weight:bold;}
+tr.title a:link{color:#9F2911;font-weight:normal;}
+tr.title a:visited {color:#9F2911;font-weight:normal;}
+tr.title a:active {color:#9F2911;font-weight:normal;}
+tr.title a:hover {color:#9F2911;font-weight:normal;}
+
+/*顶部框架页样式*/
+.top{height:64px;background:url(../Images/top-bg.gif) repeat-x;}
+.top .top1{color:white;padding:8px 20px 8px 0px;}
+.top .top1 li{height:20px;line-height:20px;float:right;padding:0px 3px;}
+.top .top1 a:link,.top .top1 a:visited{color:#8ef200;font-weight:bold;text-decoration:none;}
+.top .top1 a:hover{text-decoration:underline;}
+.top .top2{height:27px;line-height:27px;text-align:center;padding-right:20px;}
+.top .top2 li{width:60px;height:22px;line-height:22px;padding-left:5px;background:url(../Images/top-line.gif) no-repeat;float:right;}
+.top .top2 a:link,.top .top2 a:visited{color:#2c5784;text-decoration:none;}
+.top .top2 a:hover{color:#444444;}
+
+/*左侧框架页样式*/
+.left{width:182px;}
+.left .title{
+	height:27px;line-height:27px;
+	font-size:14px;font-family:微软雅黑;
+	padding-left:10px;
+	background:url(../Images/menu_bg.gif);
+}
+.left .menu>li{color:#003366;background:url(../Images/menu_bg2.gif);}
+.left .menu>li>a{
+	display:block;
+	height:27px;
+	line-height:27px;
+	font-weight:bold;
+	padding-left:30px;
+}
+.left .menu .acitem>li>a{
+	color:#000;
+	height:26px;
+	line-height:26px;
+	font-weight:100;
+	padding-left:35px;
+	display:block;
+	background:url(../Images/menu_bg1.gif) no-repeat;
+}

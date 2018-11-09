@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="./Public/Admin/Css/public.css" rel="stylesheet" type="text/css" />
+<title>文章分类管理</title>
+<script type="text/javascript">
+//表单验证
+function checkForm()
+{
+	var pattern1 = /^[\S]{1,20}$/;
+	var pattern2 = /^[\d]{2}$/;
+	if(!pattern1.test(document.form1.classname.value))
+	{
+		window.alert("分类名称没有填写或格式不正确！");
+		document.form1.classname.focus();
+		return false;
+	}else if(!pattern2.test(document.form1.orderby.value))
+	{
+		window.alert("排序没有填写或格式不正确！");
+		document.form1.orderby.focus();
+		return false;
+	}
+}
+</script>
+</head>
+
+<body>
+<table width="100%" border="0" align="center" cellpadding="1" cellspacing="1" class="border">
+	<tr class="topbg"><td>文章分类管理</td></tr>
+	<tr class="tdbg">
+		<td height="30">&nbsp;&nbsp;
+			<a href="?c=Category&a=index">管理首页</a>&nbsp;|&nbsp;
+			<a href="?c=Category&a=add">添加文章分类</a>
+		</td>
+	</tr>
+</table>
+<br />
+<form name="form1" method="post" action="?c=Category&a=insert" onSubmit="return checkForm()">
+<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="border">
+	<tr class="title">
+		<td colspan="2" align="center">添加文章分类</td>
+	</tr>
+	<tr class="tdbg">
+		<td width="11%" height="30" align="right">名&nbsp;&nbsp;称：</td>
+		<td width="89%"><input name="classname" type="text" size="90" maxlength="50" /></td>
+	</tr>
+	<tr class="tdbg">
+		<td height="30" align="right">排&nbsp;&nbsp;序：</td>
+		<td>
+			<input name="orderby" type="text" value="50" size="5" maxlength="2" /> 
+			数值数小，排序越靠前
+		</td>
+	</tr>
+	<tr class="tdbg">
+		<td height="30" align="right">父分类：</td>
+		<td>
+			<select name="pid">
+				<option value="0">无</option>
+				<{foreach $categorys as $category}>
+				<option value="<{$category.id}>">
+					<{str_repeat('--',$category.level*4)}>
+					<{$category.classname}>
+				</option>
+				<{/foreach}>
+			</select>
+		</td>
+	</tr>
+	<tr class="tdbg">
+		<td height="30" align="right">&nbsp;</td>
+		<td>
+			<input type="submit" value="添加" />
+			<input type="button" onclick="history.go(-1)" value="返回" />
+		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

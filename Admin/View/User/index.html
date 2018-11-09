@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="./Public/Admin/Css/public.css" rel="stylesheet" type="text/css" />
+<title>用户管理</title>
+<script type="text/javascript">
+//定义删除提示的方法
+function confirmDel(id)
+{
+	//询问是否删除
+	if(window.confirm("你确定要删除吗？"))
+	{
+		//跳转到当前控制器，并传递参数
+		location.href = "?c=User&a=delete&id="+id;
+	}
+}
+</script>
+</head>
+
+<body leftmargin="2" topmargin="0" marginwidth="0" marginheight="0" oncontextmenu="self.event.returnValue=false">
+<table width="100%" border="0" align="center" cellpadding="1" cellspacing="1" class="border">
+	<tr class="topbg"><td>用户管理</td></tr>
+	<tr class="tdbg">
+		<td height="30">&nbsp;&nbsp;
+			<a href="?c=User&a=index">管理首页</a>&nbsp;|&nbsp;
+			<a href="?c=User&a=add">添加用户</a>
+		</td>
+	</tr>
+</table>
+<br />
+<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="border">
+	<tr class="title">
+		<td align="center">编号</td>
+		<td align="center">用户名</td>
+		<td align="center">真实姓名</td>
+		<td align="center">联系电话</td>
+		<td align="center">角色</td>
+		<td align="center">最后登录IP</td>
+		<td align="center">最后登录时间</td>
+		<td align="center">登录总次数</td>
+		<td align="center">账号状态</td>
+		<td align="center">操作选项</td>
+	</tr>
+	<{foreach $users as $user}>
+	<tr class="tdbg">
+		<td align="center"><{$user['id']}></td>
+		<td align="center"><{$user['username']}></td>
+		<td align="center"><{$user['name']}></td>
+		<td align="center"><{$user['tel']}></td>
+		<td align="center">
+			<{if $user['role']}>
+				<font color='red'>超级管理员</font>
+			<{else}>
+				普通管理员
+			<{/if}>
+		</td>
+		<td align="center"><{$user['last_login_ip']}></td>
+		<td align="center"><{$user['last_login_time']|date_format:'%Y-%m-%d %H:%M:%S'}></td>
+		<td align="center"><{$user['login_times']}></td>
+		<td align="center">
+			<{if $user['status']}>
+				<font color='blue'>正常</font>
+			<{else}>
+				<font color='red'>关闭</font>
+			<{/if}>
+		</td>
+		<td align="center">
+			<a href="?c=User&a=edit&id=<{$user['id']}>">修改</a> | 
+			<a href="javascript:void(0)" onClick="confirmDel(<{$user['id']}>)">删除</a>
+		</td>
+	</tr>
+	<{/foreach}>
+</table>
+</body>
+</html>

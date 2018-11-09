@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="./Public/Admin/Css/public.css" rel="stylesheet" type="text/css" />
+<title>文章管理</title>
+<script type="text/javascript">
+//定义删除提示的方法
+function confirmDel(id)
+{
+	//询问是否删除
+	if(window.confirm("你确定要删除吗？"))
+	{
+		//跳转到当前控制器，并传递参数
+		location.href = "?c=Article&a=delete&id="+id;
+	}
+}
+</script>
+</head>
+
+<body>
+<!--导航栏-->
+<table width="100%" border="0" align="center" cellpadding="1" cellspacing="1" class="border">
+	<tr class="topbg"><td>文章管理</td></tr>
+	<tr class="tdbg">
+		<td height="30">&nbsp;&nbsp;
+			<a href="?c=Article&a=index">管理首页</a>&nbsp;|&nbsp;
+			<a href="?c=Article&a=add">添加文章</a>
+		</td>
+	</tr>
+</table>
+
+<!--搜索表单-->
+<div style="padding:8px 5px;margin:8px 3px;background-color:#fefefe;text-align:center;">
+<form name="form1" method="post" action="?c=Article&a=index">
+	<span style="padding:0px 5px;">分类</span>
+	<select name="category_id">
+		<option value="">任意</option>
+		<{foreach $categorys as $category}>
+		<option value="<{$category.id}>">
+			<{str_repeat('--',$category.level*4)}>
+			<{$category.classname}>
+		</option>
+		<{/foreach}>
+	</select>
+	<span style="padding:0px 5px;">标题</span>
+	<input type="text" name="keyword" />
+	<input type="submit" value="搜索" />
+	<input type="hidden" name="ac" value="search" />
+</form>
+</div>
+
+<!--文章列表-->
+<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="border">
+<tr class="title" align="center">
+	<td>编号</td>
+	<td>分类</td>
+	<td>标题</td>
+	<td>作者</td>
+	<td>发布时间</td>
+	<td>操作选项</td>
+</tr>
+<{foreach $articles as $article}>
+<tr class="tdbg" align="center">
+	<td><{$article.id}></td>
+	<td align="left"><{$article.classname}></td>
+	<td align="left">
+		<a target="_blank" href="#"><{$article.title}></a> 
+		<{if $article.top}>[<font color="red">顶</font>]<{/if}></td>
+	<td><{$article.username}></td>
+	<td><{$article.addate|date_format:'%Y-%m-%d %H:%M:%S'}></td>
+	<td>
+		<a href="?c=Article&a=edit&id=<{$article.id}>">修改</a> | 
+		<a href="javascript:void(0)" onClick="confirmDel(<{$article.id}>)">删除</a>
+	</td>
+</tr>
+<{/foreach}>
+<!--文章分页-->
+<tr class="tdbg">
+	<td colspan="7" align="center"><{$pageStr}></td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="./Public/Admin/Css/public.css" type="text/css" rel="stylesheet" />
+<script src="./Public/Admin/Js/jquery.js" type="text/javascript"></script>
+<script src="./Public/Admin/Js/menu.js" type="text/javascript"></script>
+<title>管理左边页</title>
+<base target="main" />
+</head>
+<body>
+<div class="left">
+	<div><img src="./Public/Admin/Images/menu_topimg.gif" /></div>
+	<div class="title"><b>网站管理菜单</b></div>
+	<div><img src="./Public/Admin/Images/menu_topline.gif" /></div>
+	<div class="content">
+		<ul class="menu collapsible">
+			<li><a href="#">分类管理</a>
+				<ul class="acitem">
+					<li><a href='?c=Category&a=add'>添加分类</a></li>
+					<li><a href='?c=Category&a=index'>管理分类</a></li>
+				</ul>
+			</li>
+			<li><a href="#">文章管理</a>
+				<ul class="acitem">
+					<li><a href='?c=Article&a=add'>添加文章</a></li>
+					<li><a href='?c=Article&a=index'>管理文章</a></li>
+				</ul>
+			</li>
+			<li><a href="#">文章评论</a>
+				<ul class="acitem">
+					<li><a href='?c=Comment&a=index'>管理文章评论</a></li>
+				</ul>
+			</li>
+			<!--友情链接-->
+			<li><a href="#">友情链接</a>
+				<ul class="acitem">
+					<li><a href='?c=Links&a=add'>添加链接</a></li>
+					<li><a href='?c=Links&a=index'>管理链接</a></li>
+				</ul>
+			</li>
+			<!--用户管理-->
+			<li><a href="#">用户管理</a>
+				<ul class="acitem">
+					<li><a href='?c=User&a=add'>添加用户</a></li>
+					<li><a href='?c=User&a=index'>用户管理</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div><img src="./Public/Admin/Images/menu_bottomimg.gif" /></div>
+</div>
+</body>
+</html>

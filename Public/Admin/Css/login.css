@@ -1,0 +1,54 @@
+/***********************后台登录页面的CSS样式******************************/
+/*头部样式*/
+#header{
+	background:url("../Images/login-top-bg.gif") repeat-x;
+	height:41px;
+}
+#content{
+	background:url("../Images/login-bg.gif") repeat-x;
+	padding:395px 20px 58px 0px; 
+	text-align:right;
+}
+#buttom{
+	background:url("../Images/login-buttom-bg.gif") repeat-x;
+	height:20px;
+}
+#buttom .copy{float:right;}
+#buttom .copy2{
+	float:left;
+	padding-left:30%;
+	color:#93a1ab;
+	font-size:10px;
+	line-height:20px;
+}
+
+/*中间布局样式*/
+#position{
+	position:absolute;
+	top:88px;
+	margin:0px 0px 0px -320px;
+	left:50%;
+}
+#position #inposition{width:722px;height:409px;}
+#position #inposition .login-left{
+	background:url("../Images/login-content-bg.gif") no-repeat;
+	width:361px;
+	height:409px;
+	float:left;
+}
+#position #inposition .login-left .login-left-logo{margin-top:90px;}
+#position #inposition .login-left .login-left-content{color:#7A7B7B; text-align:left;padding:20px 15px;}
+#position #inposition .login-left .login-left-content ul{list-style:none;}
+#position #inposition .login-left .login-left-content ul li{background:url("../Images/icon-li.gif") no-repeat center left; padding-left:15px; margin:4px 0px 4px 10px;}
+#position #inposition .login-left .login-left-sever{margin:4px 0px 4px 50px;text-align:left; font-weight:bold;}
+
+#position #inposition .login-right{width:361px; height:409px; float:right; text-align:left;}
+#position #inposition .login-right .login-right-title{margin:111px 0px 30px 14px; text-align:left; color:#444;font-size:24px; font-weight:bold;}
+#position #inposition .login-right .login-right-input{margin:0px 0px 0px 14px; text-align:left; color:#516587;}
+#position #inposition .login-right .login-right-input td{color:#516587; padding-bottom:8px;}
+#position #inposition .login-right .login-right-input .input{border:1px solid #95A1B6; width:150px;}
+#position #inposition .login-right .login-right-input .input2{border:1px solid #95A1B6; width:70px;}
+#position #inposition .login-right .login-right-login{margin:0px 0px 10px 100px; text-align:left; color:#516587;}
+#position #inposition .login-right .login-right-login .button{ background:url("../Images/buttom_bg1.gif") no-repeat; cursor:pointer;  width:72px; height:20px; border:none; color:#395366; line-height:17px; padding-top:3px;}
+#position #inposition .login-right .login-right-erro{margin:20px 0px 10px 14px; width:250px; text-align:left; color:#9C614F; border:1px solid #FF6600; background:#FFF2E9 url("../Images/erro.gif") no-repeat left top; padding:3px 25px;}
+

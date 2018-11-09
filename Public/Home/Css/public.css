@@ -1,0 +1,230 @@
+/*全局样式*/
+body,h2,ol,ul,li,a,p,input{ margin:0px;	padding:0px; }
+ul,li,ol{ list-style:none; }
+p{ padding:8px 0px; }
+img{ border:none; display:block;}
+body{ background-color:#4B8CCA; font-family:Verdana,"微软雅黑",sans-serif; font-size: 12px;}
+a:link,a:visited{color:#2971bb;text-decoration:none;}
+a:hover{color:red;text-decoration:underline;}
+.clear{ clear:both; }
+
+/*顶部导航栏*/
+.topbar{
+	background: rgba(0, 0, 0, 0) url("../images/topbar.png") repeat-x scroll 0 0;
+    font-family: "宋体";
+    font-size: 12px;
+    height: 30px;
+    min-width: 950px;
+    overflow: hidden;
+	color:#2E3092;
+}
+.topbar a{padding:0px 5px;}
+.topbar a:link, .topbar a:visited{color:#2E3092;text-decoration:none;}
+.topbar a:hover {color:red;}
+.topbar .content{width:950px;height:30px;margin:0px auto;}
+.topbar .content .divL{height:30px;line-height:30px;float:left;}
+.topbar .content .divR{height:30px;line-height:30px;float:right;}
+
+/*网页头部*/
+.blogbg{
+	background-image: url("../images/sinablogb.jpg");
+	background-position: center top;
+    background-repeat: no-repeat;
+    clear: both;
+    width: 100%;
+	height:335px;
+}
+.blogbg .header{width:950px;margin:0px auto;height:267px;}
+.blogbg a:link, .blogbg a:visited{color:white;text-decoration:none;}
+.blogbg a:hover{color:white;text-decoration:underline;}
+.blogbg .header .title{padding:100px 0px 0px 40px;font-size:14px;}
+.blogbg .header .title h2{
+	font-size:28px;
+	font-family:"微软雅黑";
+	color:white;
+	font-weight:300;
+	padding-bottom:5px;
+}
+.blogbg .header .menu{
+	width:250px;
+	height:32px;
+	line-height:32px;
+	background:url("../images/blognavbg.png") no-repeat;
+	margin:50px 0px 0px 190px;
+	font-size:16px;
+	font-family:"宋体";
+	padding-left:5px;
+}
+.blogbg .header .menu li{float:left;}
+.blogbg .header .menu li a{padding:0px 8px;border-right:1px dotted #ccc;}
+.blogbg .header .menu .noLine{border:none;}
+.blogbg .header .menu .current{font-weight:bold;}
+
+/*网页主体*/
+.contains{
+	width:950px;
+	margin:0px auto;
+	position:relative;
+	top:-68px;
+}
+
+/**************************************左边栏**************************************/
+.left{width:730px;float:left;background-color:white;}
+.left .toptitle{
+	height:26px;
+	line-height:26px;
+	padding-left:10px;
+	font-weight:bold;
+	color:#444;
+	background:url(../images/modelhead.png) -2px 0px;
+}
+.left .block{padding:5px 20px;}
+.left .block .title{height:50px;line-height:50px;}
+.left .block .title a:link,.left .block .title a:visited{
+	font-size:20px;
+	color:#2971bb;
+	text-decoration:none;
+}
+.left .block .title span{color:#999;}
+.left .block .content{font-size:14px;line-height:22px;color:#323e32;}
+.left .block .bottom{height:60px;line-height:60px;border-bottom:1px dotted #999;}
+.left .block .bottom span{float:left;color:#444;}
+.left .block .bottom a{float:right;}
+
+/*分页效果*/
+.pagelist{height:40px;line-height:40px;padding-bottom:10px;text-align:center;}
+.pagelist span{padding:0px 5px;}
+.pagelist a{padding:0px 3px;}
+.pagelist form{display:inline;}
+.pagelist input[type=text]{width:20px;}
+
+/*分页效果*/
+.pagelist2{padding:15px;color:#444;font-size:14px;}
+.pagelist2 li{padding:3px 0px;}
+
+
+/*博文列表*/
+.left .bloglist{padding:5px 20px;}
+.left .bloglist li{
+	height:30px;
+	line-height:30px;
+	padding-left:10px;
+	font-size:14px;
+	border-bottom:1px dotted #999;
+	background:url(../images/SG_dot.gif) no-repeat left center;
+}
+.left .bloglist li>span{float:right;color:#999;}
+.left .bloglist li .span1{color:#333;}
+
+/*博文正文*/
+.left .blogdetail{padding:5px 20px;}
+.left .blogdetail .title{height:50px;line-height:50px;}
+.left .blogdetail .title a:link,.left .blogdetail .title a:visited{
+	font-size:20px;
+	color:#2971bb;
+	text-decoration:none;
+}
+.left .blogdetail .title span{color:#999;}
+.left .blogdetail .content{font-size:16px;line-height:160%;color:#323e32;font-family:"Microsoft YaHei","Helvetica Neue",SimSun;}
+.left .blogdetail .bottom{padding:20px 0px;border-bottom:1px dotted #999;}
+.left .blogdetail .bottom .other{line-height:30px;color:#444;}
+
+/*发布评论*/
+.left .comment{margin:5px 10px;}
+.left .comment .title{
+	border-bottom:1px solid #ccc;
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	font-weight:bold;
+}
+.left .comment p{padding:3px 0px;margin:0px;}
+.left .comment li{padding:5px 0px;}
+.left .comment .ul01{padding:15px 20px;border-bottom:1px dotted #ccc;}
+.left .comment img{padding:3px;border:1px solid #ccc;margin-right:10px;float:left;}
+.left .comment .p1{width:600px;float:left;}
+.left .comment .p2{width:600px;float:left;}
+.left .comment .ul02{padding:15px 20px 15px 60px;}
+.left .comment .p3{width:528px;float:left;}
+.left .comment .p4{width:528px;float:left;}
+.left form[name=comment]{padding:10px;}
+.left form[name=comment] div{font-weight:bold;font-size:14px;height:30px;line-height:30px;}
+/**************************************右边栏******************************************/
+.right{width:210px;float:right;}
+.right .title{
+	height:26px;
+	line-height:26px;
+	padding-left:10px;
+	font-weight:bold;
+	background:url(../images/modelhead.png) -2px 0px;
+}
+.right .content{padding:10px;}
+
+/*文章标题搜索*/
+.right .search{background-color:white;margin-bottom:10px;}
+.right .search .content input[name=title]{
+	width:140px;
+	border:1px solid #ccc;
+	height:24px;
+	padding-left:3px;
+}
+.right .search .content input[type=submit]{
+	height:26px;
+	width:40px;
+	background-color:#f0f0f0;
+	border:1px solid #ccc;
+	cursor:pointer;
+}
+
+
+/*文章分类*/
+.right .category{background-color:white;margin-bottom:10px;}
+.right .category li{
+	height:24px;
+	line-height:24px;
+	padding-left:10px;
+	background:url(../images/SG_dot.gif) no-repeat left center;
+}
+
+/*最新评论*/
+.right .comment{background-color:white;margin-bottom:10px;}
+.right .comment li{
+	height:42px;
+	padding:3px 0px 3px 10px;
+	background:url(../images/SG_dot.gif) no-repeat left 15px;
+	border-bottom:1px dotted #999;
+}
+.right .comment li div{padding:3px 0px;}
+.right .comment li span{float:right;}
+
+/*文章归档*/
+.right .category-date{background-color:white;margin-bottom:10px;}
+.right .category-date li{
+	height:24px;
+	line-height:24px;
+	padding-left:10px;
+	color:#666;
+	background:url(../images/SG_dot.gif) no-repeat left center;
+}
+
+
+/*友情链接*/
+.right .links{background-color:white;margin-bottom:10px;}
+.right .links li{
+	height:24px;
+	line-height:24px;
+	padding-left:10px;
+	background:url(../images/SG_dot.gif) no-repeat left center;
+}
+
+
+/*********************网页底部**************************/
+.footer{
+	line-height:24px;
+	clear:both;
+	text-align:center;
+	padding-bottom:10px;
+	position:relative;
+	top:-30px;
+	color:#c5daee;
+}
