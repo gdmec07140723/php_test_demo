@@ -7,7 +7,7 @@ return array(
 	'db_port'	=> '3306',
 	'db_user'	=> 'root',
 	'db_pass'	=> 'root',
-	'db_name'	=> 'Blog',
+	'db_name'	=> 'blog',
 	'charset'	=> 'utf8',
 
 	//Home默认配置信息

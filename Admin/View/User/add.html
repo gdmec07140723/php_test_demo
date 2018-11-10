@@ -16,6 +16,7 @@ function checkForm()
 	//验证表单
 	if(!pattern1.test(document.form1.username.value))
 	{
+	    console.log(pattern1)
 		window.alert("用户名没有填写或格式不正确！");
 		return false;
 	}else if(!pattern1.test(document.form1.password.value))
