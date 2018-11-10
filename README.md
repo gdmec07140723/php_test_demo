@@ -8,4 +8,4 @@
 
 ## 用户表格
 
-首页 -> tab栏后台管理 -> login -> leftBar -> 用户管理
+首页 -> nav后台管理 -> login -> leftBar -> 用户管理
