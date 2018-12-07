@@ -117,6 +117,13 @@ final class ArticleController extends BaseController
 		}else{
 			$data['top'] = 0;
 		}
+
+        if(isset($_POST['comment_freeze'])){
+            $data['comment_freeze'] = 1;
+        }else{
+            $data['comment_freeze'] = 0;
+        }
+
 		$data['content']		= $_POST['content'];
 		//调用模型类对象的更新方法
 		ArticleModel::getInstance()->update($data,$id);

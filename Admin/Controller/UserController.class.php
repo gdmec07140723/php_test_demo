@@ -18,14 +18,47 @@ final class UserController extends BaseController
 		$this->smarty->display('User/index.html');
 	}
 
-	//添加用户表单
+    //添加用户表单(普通用户注册)
+    public function register()
+    {
+        $this->smarty->display("User/register.html");
+    }
+
+    //插入用户(普通用户注册)
+    public function insert_register()
+    {
+        //获取表单数据
+        $data['username']	= $_POST['username'];
+        $data['password']	= md5($_POST['password']);
+        $data['name']		= $_POST['name'];
+        $data['tel']		= $_POST['tel'];
+        $data['status']		= $_POST['status'];
+        $data['role']		= $_POST['role'];
+        $data['addate']		= time();
+
+        //创建模型类对象
+        $modelObj = UserModel::getInstance();
+
+        //查询用户是已经存在
+        $records = $modelObj->rowCount("username='".$data['username']."'");
+        if($records){
+            $this->jump("用户{$data['username']}已经被注册了！","?c=User");
+        }
+
+        //调用模型对象的插入数据方法
+        $modelObj->insert($data);
+        //跳转到用户首页
+        $this->jump("用户{$data['username']}注册成功！","?c=User");
+    }
+
+	//添加用户表单(后台添加)
 	public function add()
 	{
 		$this->denyAccess();
 		$this->smarty->display("User/add.html");
 	}
 
-	//插入用户
+	//插入用户(后台添加)
 	public function insert()
 	{
 		$this->denyAccess();
@@ -50,7 +83,7 @@ final class UserController extends BaseController
 		//调用模型对象的插入数据方法
 		$modelObj->insert($data);
 		//跳转到用户首页
-		$this->jump("用户{$data['username']}添加成功！","?c=User");
+		$this->jumping("用户{$data['username']}添加成功！","?c=index");
 	}
 
 	//编辑用户
